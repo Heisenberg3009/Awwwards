@@ -5,8 +5,8 @@ import Navbar from "./components/Navbar.jsx";
 
 const App = () => {
     return (
-        //Bg-zinc-600 added so that we can see the nav links on a white bg.
-        <main className="relative min-h-screen w-screen overflow-x-hidden bg-zinc-600">
+        //Bg-zinc-600 added so that we can see the nav links on a white bg - We removed it because it was no longer needed.
+        <main className="relative min-h-screen w-screen overflow-x-hidden">
             <Navbar />
             <Hero />
             <About />

@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import Button from "./Button.jsx";
 import {TiLocationArrow} from "react-icons/ti";
 
@@ -7,11 +7,35 @@ import {TiLocationArrow} from "react-icons/ti";
 
 const navItems = ['Nexus','Vault','Prologue,','About','Contact'];
 
-
 const Navbar = () => {
+    //To check whether the audio is playing
+    const [isAudioPlaying, setIsAudioPlaying] = useState(false);
+    //TO check whether indicator is active
+    const [isIndicatorActive, setIsIndicatorActive] = useState(false);
+
     //This div section will be animated later. Hence, we can add a reference to it. We will use useRef at the start equal to null.
 
     const navContainerRef = useRef(null);
+    //We will also create a new Ref, that will allow us to attach audio to this element.
+    const audioElementRef = useRef(null);
+
+    //We are now going to create a new function that will allow us to play music.
+
+    const toggleAudioIndicator = () => {
+        setIsAudioPlaying((prev) => !prev);
+
+        setIsIndicatorActive((prev) => !prev);
+
+    }
+
+    useEffect(() => {
+        if(isAudioPlaying) {
+            audioElementRef.current.play();
+        } else {
+            audioElementRef.current.pause();
+        }
+    }, [isAudioPlaying]);
+
     return (
         //We can also start giving it some class names - 1. fixed: because it will be fixed at the top 2. inset-x-0 3.top-4 4. z-50: so that it appears above other elements 5. h-16 6. border-none 7. transition-all 8. duration-700 9. sm:inset-x-6
 
@@ -24,6 +48,8 @@ const Navbar = () => {
         //Let's crete a div with the following classes: 1. flex 2. items-center 3. gap-7
 
         // Right within it, we create an image element. We will give its source, alt and the required CSS className.
+
+        //Down, we will also create a button to play music - yes, we can control the music.
         <div ref={navContainerRef} className="fixed inset-x-0 top-4 z-50 h-16 border-none transition-all duration-700 sm:inset-x-6 ">
             <header className="absolute top-1/2 w-full -translate-y-1/2">
                 <nav className="flex size-full items-center justify-between p-4">
@@ -39,11 +65,21 @@ const Navbar = () => {
                     <div className = "flex h-full items-center">
                         <div className="hidden md:block">
                             {navItems.map((item) => (
-                                <a className="nav-h">
+                                //Here, we are use navItems.map to map over the individual items and we can automatically return an anchor tag for each one.
+                                //Make sure to use a normal bracket instead of curly bracket, since we are doing an automatic return with this one.
+                                //Now, within this anchor tag we can simply render the item.
+                                <a key={item} href={`#${item.toLowerCase()}`} className="nav-hover-btn" >
                                     {item}
                                 </a>
                             ))}
                         </div>
+
+                        <button className="ml-10 flex items-center space-x-0.5" onClick={toggleAudioIndicator}>
+                            <audio ref={audioElementRef}  className="hidden" src="/audio/loop.mp3" loop / >
+                                {[1, 2, 3, 4].map((bar =>
+                                    <div key={bar} className={`indicator-line ${isIndicatorActive ? 'active' : ''}`} style={{animationDelay: `${bar * 0.1}s`}} />
+                                ))}
+                        </button>
                     </div>
                 </nav>
 
