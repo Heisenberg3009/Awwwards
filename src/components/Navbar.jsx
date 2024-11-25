@@ -1,4 +1,12 @@
 import React, {useRef} from 'react'
+import Button from "./Button.jsx";
+import {TiLocationArrow} from "react-icons/ti";
+
+//We can map over our NavItems within the nav element tag.We can declare an array of objects with title, home, link, etc, but it can messy very soon.
+//Instead, we are going to define the navItems at the top.
+
+const navItems = ['Nexus','Vault','Prologue,','About','Contact'];
+
 
 const Navbar = () => {
     //This div section will be animated later. Hence, we can add a reference to it. We will use useRef at the start equal to null.
@@ -21,6 +29,21 @@ const Navbar = () => {
                 <nav className="flex size-full items-center justify-between p-4">
                     <div className = "flex items-center gap-7">
                         <img src="/img/logo.png" alt="logo" className = "w-10" />
+                        <Button
+                            id = "product-button"
+                            title="Product"
+                            rightIcon={<TiLocationArrow />}
+                            containerClass="bg-blue-50 md:flex hidden items-center justify-center gap-1"
+                        />
+                    </div>
+                    <div className = "flex h-full items-center">
+                        <div className="hidden md:block">
+                            {navItems.map((item) => (
+                                <a className="nav-h">
+                                    {item}
+                                </a>
+                            ))}
+                        </div>
                     </div>
                 </nav>
 
