@@ -99,8 +99,6 @@ export const BentoCard = ({ src, title, description, isComingSoon }) => {
 };
 
 const Features = () => (
-    //Section semantic div shows that something new is happening on this part of the screen.
-    //We then give them required CSS tag names. This will initially be a rectangle.
     <section className="bg-black pb-52">
         <div className="container mx-auto px-3 md:px-10">
             <div className="px-5 py-32">
