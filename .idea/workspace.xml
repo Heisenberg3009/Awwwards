@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75d8826c-35b3-4720-a1c4-ba865d89c467" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/RoundedCorners.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Story.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Features.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Features.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +60,7 @@
       <workItem from="1732388881926" duration="56000" />
       <workItem from="1732388940891" duration="38395000" />
       <workItem from="1732682447723" duration="5339000" />
-      <workItem from="1733985776494" duration="4165000" />
+      <workItem from="1733985776494" duration="8182000" />
     </task>
     <servers />
   </component>
@@ -79,7 +77,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/App.jsx</url>
-          <line>62</line>
+          <line>7</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
