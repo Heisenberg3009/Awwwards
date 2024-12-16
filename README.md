@@ -36,7 +36,7 @@ Instant server startup means the development server begins almost immediately, e
 Next.js takes longer to start the development server because it is optimized for server-side rendering (SSR) and static site generation (SSG), which require additional processing.
 
 ### Is This Feature Difficult or Unavailable Elsewhere?
-**Not Unavailable:**
+**<u>Not Unavailable:</u>**
 1. HMR is a common feature across modern development tools like Webpack, Parcel, and Next.js.
 2. Instant server startup is rare and a defining feature of Vite due to its use of native ES Modules and lightweight architecture.
 
@@ -70,6 +70,16 @@ Generates the necessary files (like index.html, main.js, or App.jsx) and a confi
 
 **<u>3. Installing Dependencies:</u>**
 1. After setting up the project structure, it may suggest running npm install to install the required libraries.
-2. It will ask whether to run a Vite installer?
-3. Give yes, and ride through it.
-4. You can check the initialization by running npm run dev in the terminal.
+2. It will ask whether to run a Vite installer? Give yes, and ride through it.
+3. You can check the initialization by running `npm run dev` in the terminal.
+
+### Let's Proceed:
+
+1. Now, let's have a look at the file and folder structure that was generated for us when we installed the Vite application. 
+2. Let us start from the `src` folder which is the most important folder. 
+3. We notice that we have a lot of stuff we do not need right now such ass App.css, index.css and a lot of boilerplate code in App.jsx.
+
+**<u>What is boilerplate code you ask?</u>**
+1. "Boilerplate" refers to sections of code that are repeated in multiple places with little or no variation. 
+2. It often involves standardized or template-like code that is necessary to set up a particular framework, language, or project, but doesn’t directly contribute to the unique functionality of the application.
+3. In simpler terms, boilerplate is the default setup or reusable code that developers include to get things up and running.
