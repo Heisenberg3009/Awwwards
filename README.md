@@ -79,7 +79,9 @@ Generates the necessary files (like index.html, main.js, or App.jsx) and a confi
 2. Let us start from the `src` folder which is the most important folder. 
 3. We notice that we have a lot of stuff we do not need right now such ass App.css, index.css and a lot of boilerplate code in App.jsx.
 
-**<u>What is boilerplate code you ask?</u>**
-1. "Boilerplate" refers to sections of code that are repeated in multiple places with little or no variation. 
-2. It often involves standardized or template-like code that is necessary to set up a particular framework, language, or project, but doesn’t directly contribute to the unique functionality of the application.
-3. In simpler terms, boilerplate is the default setup or reusable code that developers include to get things up and running.
+    **<u>What is boilerplate code you ask?</u>**
+    1. "Boilerplate" refers to sections of code that are repeated in multiple places with little or no variation. 
+    2. It often involves standardized or template-like code that is necessary to set up a particular framework, language, or project, but doesn’t directly contribute to the unique functionality of the application.
+    3. In simpler terms, boilerplate is the default setup or reusable code that developers include to get things up and running.
+ 4. Let's remove the boilerplate by deleting the code written inside and running `rafce`, which stands for react arrow function export component (If it didn't work for us, we will need to install any kind of react snippets package).
+ 5. 
