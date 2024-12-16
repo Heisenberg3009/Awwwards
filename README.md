@@ -84,4 +84,34 @@ Generates the necessary files (like index.html, main.js, or App.jsx) and a confi
     2. It often involves standardized or template-like code that is necessary to set up a particular framework, language, or project, but doesn’t directly contribute to the unique functionality of the application.
     3. In simpler terms, boilerplate is the default setup or reusable code that developers include to get things up and running.
  4. Let's remove the boilerplate by deleting the code written inside and running `rafce`, which stands for react arrow function export component (If it didn't work for us, we will need to install any kind of react snippets package).
- 5. 
+ 5. Let's move ahead and delete index.css and App.css as we don't need them. Now we have a bit of cleaner working environment, let's setup tailwind CSS.
+
+**<u>How to install and setup tailwind CSS?</u>**
+1. Go to [Tailwind CSS](https://www.tailwindcss.com) -> Get Started.
+2. Go to Search -> Type Vite and check if it's the correct installation for Vite.
+3. Copy the code `npm install -D tailwindcss postcss autoprefixer`.
+4. Paste in a new terminal, within the project.
+5. Continue with `npx tailwindcss init -p`.
+6. This will initialize a new tailwind config within the project. 
+7. As a second part of the installation, we will need to override the default tailwind config by adding 
+   ```
+   /** @type {import('tailwindcss').Config} */
+    export default {
+     content: [
+        "./index.html",
+        "./src/**/*.{js,ts,jsx,tsx}",
+         ],
+        theme: {
+         extend: {},
+         },
+         plugins: [],
+    }
+    ```
+8. Next, we will need to add Tailwind CSS directives into our CSS. So we will create a new file in the source folder and call it `index.css`.
+9. Here, we can import the tailwind CSS directives.
+    ```
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+    ```
+10. After that, we head over to App.jsx.

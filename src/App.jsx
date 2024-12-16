@@ -4,6 +4,25 @@ import Navbar from "./components/Navbar.jsx";
 import Features from "./components/Features.jsx";
 import Story from "./components/Story.jsx";
 
+/*
+
+1. After creating rafce, our structure will look like this:
+
+import React from 'react'
+
+const App = () => {
+  return (
+    <div>App</div>
+  )
+}
+
+export default App
+
+2. 
+
+*/
+
+
 
 const App = () => {
     return (
