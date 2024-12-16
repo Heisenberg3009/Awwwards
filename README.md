@@ -114,4 +114,7 @@ Generates the necessary files (like index.html, main.js, or App.jsx) and a confi
     @tailwind components;
     @tailwind utilities;
     ```
-10. After that, we head over to App.jsx.
+10. After that, we head over to App.jsx. Refer there to know what we did next.
+11. We can also go ahead and delete the existing public and assets folder.
+12. In the new public folder from the internet, there will be a new assets folder (Downloaded from the internet). It will contain the audio, fonts, images, and videos which will make landing page more dynamic.
+13. Now let's use the fonts in index.css file.

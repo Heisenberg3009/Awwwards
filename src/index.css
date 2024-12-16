@@ -11,6 +11,21 @@ body {
     font-family: "General Sans", sans-serif;
 }
 
+/*
+We can use @layer base for defining some basic properties.
+
+The phrase @layer base is likely referencing a CSS feature called "CSS layers," introduced in newer versions of the CSS specification. It is part of a module for defining layer-based style rules that help organize and manage CSS code.
+
+Here's a breakdown of what it might mean:
+
+CSS Layers: Layers allow you to define CSS rules in a specific order, giving you more control over which styles take precedence when multiple styles are applied to the same elements. It's used for managing global styles and making the cascade more predictable.
+
+@layer rule: The @layer rule allows you to define a "layer" for your CSS code. It lets you group styles into logical layers, which can be layered on top of each other, or override one another. By using @layer base, you're defining a layer named "base" that can contain base styles like resets, typography, and other foundational styles.
+
+
+*/
+
+
 @layer base {
     @font-face {
         font-family: "circular-web";
